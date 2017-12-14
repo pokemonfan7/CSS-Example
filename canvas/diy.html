@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            var img_arrowl=new Image();
+            var img_arrowr=new Image();
+            img_arrowl.src="arrow_left.png";
+            img_arrowr.src="arrow_right.png";
+            img_arrowl.onload=function()
+            {
+                context.drawImage(img_arrowl,0,10);
+            };
+            img_arrowr.onload=function()
+            {
+                context.drawImage(img_arrowr,432,10);
+            };
+
+            context.lineWidth=20;
+            context.strokeStyle="yellowgreen";
+            context.beginPath();
+            context.moveTo(27,26);
+            context.lineTo(437,26);
+            context.stroke();
+
+            var star=new Image();
+            star.src="star.png";
+            star.onload=function()
+            {
+                context.drawImage(star,200,2);
+            }
+
+            context.font="bold 20px Arial";
+            context.textBaseline="top";
+            context.fillStyle="lightblue";
+            context.fillText("0",6,45);
+            context.fillText("100",426,45);
+        };
+
+
+
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="464px" height="80px"></canvas>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+        body{
+            background-color:#fafafa;
+        }
+        header{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100%;
+            height:85px;
+            background-color:#f9f9f9;
+            border-bottom:1px solid #ccc;
+            display: flex;
+        }
+        header h3{
+			font-size:30px;
+            flex:1;
+            text-align:center;
+            line-height:85px;
+        }
+        .user,.setting{
+            width:48px;
+            height: 48px;
+            display:inline-block;
+            margin:18px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        main{
+            margin-top:86px;
+        }
+        .m_userinfo{
+            background-color:#fff;
+            padding:28px 20px 20px 20px;
+            border-bottom:1px solid #ccc;
+        }
+        .m_infotop{
+            display:flex;
+            border-bottom:2px solid #9fa1a3;
+            padding-bottom:17px;
+        }
+        .m_img{
+            width: 185px;
+            height: 185px;
+            border-radius: 6px;
+        }
+        .m_img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+        }
+        .m_infor{
+            flex:1;
+            display:flex;
+            margin-left:22px;
+            flex-direction:column;
+        }
+        .m_infor ul{
+            flex:1;
+            display:flex;
+            align-items:center;
+        }
+        .m_infor ul li{
+            flex:1;
+            text-align:center;
+            font-size:22px;
+            color:#a0a0a0;
+            /*align-items: center;*/
+        }
+        .m_infor ul li:nth-child(2){
+            border-left:1px solid #ccc;
+            border-right:1px solid #ccc;
+        }
+        .m_infor ul li a{
+            text-decoration:none;
+            display:block;
+            font-size:24px;
+            color:#1f6299;
+            margin-bottom:10px;
+        }
+        .m_infor a.infoset{
+            display:block;
+            height:63px;
+            border-radius:8px;
+            background-color:#efefef;
+            color:#a0a0a0;
+            font-size:25px;
+            text-decoration:none;
+            text-align:center;
+            line-height:63px;
+        }
+        .info_p{
+            /*height: 59px;*/
+            /*width: 601px;*/
+            padding-top:15px;
+            font-size:25px;
+            line-height:35px;
+            color:#444;
+        }
+        .img_list li{
+            float:left;
+            width: 33%;
+            height: 33%;
+            background:#ddd;
+            text-align:center;
+            margin-bottom:0.5%;
+        }
+        .img_list li:nth-child(3n-1){
+            margin-left:0.5%;
+            margin-right:0.5%;
+        }
+        .img_list li img{
+            width: 50%;
+            height: 100%;
+            box-sizing:border-box;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<header>
+    <a href="" class="user"><img src="user.png" alt=""></a>
+    <h3>POKEMONGO</h3>
+    <a href="" class="setting"><img src="setting.png" alt=""></a>
+</header>
+<main>
+<div class="m_userinfo">
+    <div class="m_infotop">
+        <div class="m_img">
+            <img src="fw.png" alt="">
+        </div>
+        <div class="m_infor">
+            <ul>
+                <li><a href="">77</a>照片</li>
+                <li><a href="">456</a>粉丝</li>
+                <li><a href="">213</a>关注</li>
+            </ul>
+            <a href="" class="infoset">编辑资料</a>
+        </div>
+    </div>
+    <p class="info_p">凤王是一种类似凤凰和孔雀的宝可梦。其羽毛多数为金色和红色，尾羽为黄色，身体暗面的羽毛为白色，
+        双翼顶端的羽毛呈绿色。凤王的双翼呈棱镜形，这使得其在飞行时能够于身后形成彩虹。</p>
+</div>
+    <ul class="img_list">
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <li><img src="images/6.jpg" alt=""></li>
+        <li><img src="images/7.jpg" alt=""></li>
+        <li><img src="images/8.jpg" alt=""></li>
+        <li><img src="images/9.jpg" alt=""></li>
+        <li><img src="images/10.jpg" alt=""></li>
+        <li><img src="images/11.jpg" alt=""></li>
+        <li><img src="images/12.jpg" alt=""></li>
+        <li><img src="images/13.jpg" alt=""></li>
+        <li><img src="images/14.jpg" alt=""></li>
+        <li><img src="images/15.jpg" alt=""></li>
+        <li><img src="images/16.jpg" alt=""></li>
+        <li><img src="images/17.jpg" alt=""></li>
+    </ul>
+</main>
+</body>
+</html>

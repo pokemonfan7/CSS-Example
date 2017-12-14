@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .mask { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); display: none; z-index: 99; }
+        .mess { position: absolute; display: none; width: 250px; height: 100px; border: 1px solid #ccc; background: #ececec; text-align: center; z-index: 101; }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $(".mask").css({"display":"block"});
+                center($(".mess"));
+                check($(this).parent(),$(".btn1"),$(".btn2"));
+            });
+            //居中
+            function center(obj){
+                var screenHeight=$(window).height();
+                var screenWidth=$(window).width();
+                var scrollTop=$(document).scrollTop();
+                var objLeft=(screenWidth-obj.width())/2;
+                var objTop=(screenHeight-obj.height())/2+scrollTop;
+                obj.css({left:objLeft+"px",top:objTop+"px","display":"block"});
+
+                $(window).resize(function () {
+                    screenHeight=$(window).height();
+                    screenWidth=$(window).width();
+                    scrollTop=$(document).scrollTop();
+                    objLeft=(screenWidth-obj.width())/2;
+                    objTop=(screenHeight-obj.height())/2+scrollTop;
+                    obj.css({left:objLeft+"px",top:objTop+"px","display":"block"});
+                });
+
+                $(window).scroll(function () {
+                    screenHeight=$(window).height();
+                    screenWidth=$(window).width();
+                    scrollTop=$(document).scrollTop();
+                    objLeft=(screenWidth-obj.width())/2;
+                    objTop=(screenHeight-obj.height())/2+scrollTop;
+                    obj.css({left:objLeft+"px",top:objTop+"px","display":"block"});
+                });
+            }
+            //确认
+            function check(obj, obj1, obj2) {
+                obj1.click(function() {
+                    obj.remove();
+                    closed($('.mask'), $('.mess'));
+                });
+                obj2.click(function() {
+                    closed($('.mask'), $('.mess'));
+                }) ;
+            }
+            //取消
+            function closed(obj1, obj2) {
+                obj1.hide();
+                obj2.hide();
+            }
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="单击弹出消息框">
+<div class="mask"></div>
+<div class="mess">
+    <p>确定要删除吗？</p>
+    <p><input type="button" value="确定" class="btn1"/>
+        <input type="button" value="取消" class="btn2"/></p>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

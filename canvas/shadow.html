@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            context.rect(20,20,200,100);
+            context.fillStyle="#8ed6ff";
+            context.shadowColor="#bbb";
+            context.shadowBlur=20;
+            context.shadowOffsetX=10;
+            context.shadowOffsetY=10;
+            context.fill();
+
+            context.shadowOffsetX=10;
+            context.shadowOffsetY=10;
+            context.shadowBlur=4;
+            var img=document.getElementById("star");
+            context.drawImage(img,350,50);
+
+            context.textBaseline="top";
+            context.font="bold 20px Arial";
+
+            context.shadowBlur=3;
+            context.shadowOffsetX=2;
+            context.shadowOffsetY=2;
+            context.fillStyle="steelblue";
+            context.fillText("This is a subtle, slightly old-fashined shadow.",10,175);
+
+            context.shadowBlur=5;
+            context.shadowOffsetX=20;
+            context.shadowOffsetY=20;
+            context.fillStyle="yellowgreen";
+            context.fillText("This is a distant shadow...",10,225);
+
+            context.shadowBlur=15;
+            context.shadowOffsetX=0;
+            context.shadowOffsetY=0;
+            context.shadowColor="black";
+            context.fillStyle="white";
+            context.fillText("This shadow is not offset. It creates a halo effect.",10,300);
+        };
+
+
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500px" height="500px"></canvas>
+<img src="star.png" id="star">
+</body>
+</html>

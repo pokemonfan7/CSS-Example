@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        h4{
+            margin:40px 0;
+        }
+        .nav-tabs{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Tabs</h4>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            <li><a href="#myhome" data-toggle="tab">MyHome</a></li>
+            <li class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">DropDown<b class="caret"></b></a>
+                <ul class="dropdown-menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#fat" tabindex="-1" data-toggle="tab">@fat</a></li>
+                    <li><a href="#mdo" tabindex="-1" data-toggle="tab">@mdo</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="home">
+                <p>
+                    AKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                </p>
+            </div>
+            <div class="tab-pane fade" id="myhome">
+                <p>
+                    BKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                </p>
+            </div>
+            <div class="tab-pane fade" id="fat">
+                <p>
+                    CKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                </p>
+            </div>
+            <div class="tab-pane fade" id="mdo">
+                <p>
+                    DKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                    KKKKKKKKKKKKKKKKKKKKKKKKKKK
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

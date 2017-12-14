@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:240px; height:26px; line-height:26px; background:#f0f0f0; border:1px solid #ddd; text-align:center; font-size:14px; margin:20px auto;
+        }
+.red{
+    border:1px solid #d00;
+    background:#ffe9e8;
+    color:#d00;
+}
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            function textFlash(obj,cssName,times){
+                var i=0,t=false,o="",c="",timers=times||2;
+                if(t) return;
+                t=setInterval(function () {
+                    i++;
+                    c=i%2?o+cssName:o;
+                    obj.attr("class",c);
+                    if(i===2*timers)
+                    {
+                        clearInterval(t);
+                        obj.removeClass(cssName);
+                    }
+                },200);
+            }
+            $(function () {
+                textFlash($("#autoFlash"),"red",3)
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <div id="autoFlash">文本闪烁</div>
+</body>
+</html>

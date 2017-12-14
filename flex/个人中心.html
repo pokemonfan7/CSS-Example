@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+        body{
+            background-color:#eaedf1;
+        }
+        .box{
+            width:280px;
+            height:188px;
+            margin:30px auto;
+            border-radius:4px;
+            background-color:#fff;
+            display:flex;
+            flex-direction:column;
+        }
+        .userinfo{
+            flex:1;
+            padding:0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .userinfo img{
+            width: 80px;
+            height: 80px;
+            border-radius:50%;
+            margin-right:18px;
+        }
+        .userinfo .userinfod{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            /*align-items:center;*/
+            justify-content:center;
+        }
+        .list{
+            height:64px;
+            display:flex;
+        }
+        .list li{
+            flex:1;
+            color:#fff;
+            text-align:center;
+
+        }
+        .list li:nth-child(1){
+            background:#14b9d6;
+        }
+        .list li:nth-child(2){
+            background:#f27935;
+        }
+        .list li:nth-child(3){
+            background:#1fbba6;
+        }
+        .list li span{
+            display:block;
+            width:20px;
+            height:20px;
+            margin:10px auto;
+            background:#ccc;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="userinfo">
+            <img src="fw.png" alt="凤王">
+            <div class="userinfod">
+                <h3>POKEMONGO</h3>
+                <p>精灵宝可梦</p>
+            </div>
+        </div>
+        <ul class="list">
+            <li><span></span>231</li>
+            <li><span></span>123</li>
+            <li><span></span>321</li>
+        </ul>
+    </div>
+</body>
+</html>

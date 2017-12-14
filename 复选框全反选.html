@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            font:62.5% "Trebuchet MS", sans-serif;
+            margin:64px;
+        }
+        #h2-caption {
+            font:20px "Trebuchet MS", sans-serif;
+        }
+        p {
+            font:16px "Trebuchet MS", sans-serif;
+        }
+        #div-log {
+            font:13px "Trebuchet MS", sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        .mar20 {
+            margin:20px;
+            font:13px "Trebuchet MS", sans-serif;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            //所有复选框单击事件
+            $(":checkbox").click(function () {
+                $(this).prop("checked",true);
+                $(this).next().css({"background":"yellowgreen"});
+            });
+            //全选
+            $("#allselect").click(function(){
+                $(":checkbox").each(function () {
+                    $(this).prop("checked",true);
+                    $(this).next().css({"background":"yellowgreen"});
+                });
+            });
+            //反选
+            $("#invert").click(function () {
+                $(":checkbox").each(function () {
+                    if($(this).prop("checked")){
+                        $(this).prop("checked",false);
+                        $(this).next().css({"background":"#fff"});
+                    }else{
+                        $(this).prop("checked",true);
+                        $(this).next().css({"background":"yellowgreen"});
+                    }
+                });
+            });
+            //取消
+            $("#cancel").click(function () {
+                $(":checkbox").each(function () {
+                    $(this).prop("checked",false);
+                    $(this).next().css({"background":"#fff"});
+                });
+            });
+            //选中输出
+            $("#output").click(function () {
+                $(":checkbox").each(function () {
+                    if($(this).prop("checked")){
+                        alert($(this).val());
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<h2 id="h2-caption">jQuery复选框 全选 反选 取消 选中输出等功能</h2>
+<hr><br>
+<div class="mar20">
+    <input name="newslist-1" id="newslist-1" type="checkbox" value="1"/><label for="newslist-1">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="newslist-2" id="newslist-2" type="checkbox" value="2"/><label for="newslist-2">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="newslist-3" id="newslist-3" type="checkbox" value="3"/><label for="newslist-3">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="newslist-4" id="newslist-4" type="checkbox" value="4"/><label for="newslist-4">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="newslist-5" id="newslist-5" type="checkbox" value="5"/><label for="newslist-5">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="newslist-6" id="newslist-6" type="checkbox" value="6"/><label for="newslist-6">POKEMONGO</label>
+</div>
+<div class="mar20">
+    <input name="allselect" id="allselect" type="button" value="全选" />
+    <input name="invert" id="invert" type="button" value="反选" />
+    <input name="cancel" id="cancel" type="button" value="取消" />
+    <input name="output" id="output" type="button" value="输出" />
+</div>
+<br><hr>
+<div id="div-log">
+</div>
+</body>
+</html>

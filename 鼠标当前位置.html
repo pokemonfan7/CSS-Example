@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $(document).mousemove(function (e) {
+                getScreen(e);
+            });
+        });
+        function getScreen(e) {
+            x=e.pageX;
+            y=e.pageY;
+            $("span").text("X:"+x+"Y:"+y);
+        }
+    </script>
+</head>
+<body>
+<div>
+    <p>鼠标当前的位置：<span></span></p>
+</div>
+</body>
+</html>

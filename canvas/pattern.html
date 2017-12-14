@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            var img=document.getElementById("fw");
+
+            var pattern=context.createPattern(img,"repeat");//repeat-x\repeat-y\repeat
+            context.fillStyle=pattern;
+            context.rect(0,0,canvas.width,canvas.height);
+            context.fill();
+        };
+
+
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="2000px" height="2000px"></canvas>
+<img src="fw.png" id="fw">
+</body>
+</html>

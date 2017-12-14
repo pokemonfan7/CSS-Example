@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            context.fillStyle="lightblue";
+            context.fillRect(20,20,100,100);
+
+            context.lineWidth=10;
+            context.strokeStyle="yellowgreen";
+            context.strokeRect(140,140,100,100);
+        };
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500px" height="300px"></canvas>
+</body>
+</html>

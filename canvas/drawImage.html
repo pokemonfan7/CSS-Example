@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            var img=new Image();
+
+            img.onload=function(){
+                context.drawImage(img,10,10,150,150);
+                //裁剪drawImage(img,0,0,520,200,10,10,260,100)原图为520*520，从0,0开始裁剪，然后绘制
+                //drawIamge()还可以绘制整个canvas元素，还可以绘制正在播放的video元素
+            };
+
+            img.src="fw.png";
+        };
+
+
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500px" height="300px"></canvas>
+</body>
+</html>

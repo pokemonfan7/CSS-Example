@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            context.moveTo(250,50);
+            context.lineTo(50,250);
+            context.lineTo(450,250);
+            //context.lineTo(250,50);closePath()会自动连接终点和起点
+            context.closePath();
+            //先填充内部
+            context.fillStyle="lightblue";
+            context.fill();
+            //后绘制轮廓
+            context.lineJoin="round";//mitre锐角斜接（默认）；round圆头；bevel平头斜接
+            context.lineWidth=10;
+            context.strokeStyle="red";
+            context.stroke();
+        };
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500px" height="300px"></canvas>
+</body>
+</html>

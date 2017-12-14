@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border:1px dashed #000000;
+            margin:50px 450px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementById("drawingCanvas");
+            var context=canvas.getContext("2d");
+
+            context.font="bold 20px Arial";
+            context.textBaseline="top";
+            context.fillStyle="black";
+            context.fillText("I'm stuck in a canvas. Someone let me out!",10,10);
+            //每次绘制一行，要绘制多行，需要多次调用fillText()
+
+            context.font="bold 40px Verdana,sans-serif";
+            context.lineWidth="1";
+            context.strokeStyle="yellowgreen";
+            context.strokeText("I'm an OUTLINE",50,50);
+        };
+
+
+    </script>
+</head>
+<body>
+<canvas id="drawingCanvas" width="500px" height="300px"></canvas>
+</body>
+</html>

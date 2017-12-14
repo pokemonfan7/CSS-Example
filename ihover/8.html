@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        div{
+            font-family:"Microsoft YaHei","微软雅黑";
+            text-align:center;
+            vertical-align:center;
+        }
+        .box{
+            width: 320px;
+            height: 220px;
+            position:relative;
+            margin:50px auto;
+            padding:10px;
+            border:1px solid #ccc;
+        }
+        .img,.text{
+            position:absolute;
+
+            width: 320px;
+            height: 220px;
+        }
+        .img{
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+            position:relative;
+        }
+        .text{
+            position:absolute;
+            pointer-events:none;
+            background-color:#333;
+            opacity:0;
+            z-index:2;
+            transition:0s 0.35s;
+        }
+        .text h3{
+            color:#fff;
+            position:relative;
+            letter-spacing: 2px;
+            font-size:22px;
+            margin:0 30px;
+            padding:55px 0 0 0;
+            height:55px;
+            text-shadow: 0 0 1px white,0 1px 2px rgba(0,0,0,0.3) ;
+        }
+        .text p{
+            color:#bbb;
+            padding:10px 5px;
+            font-style:italic;
+            margin:0 30px;
+            font-size: 12px;
+            border-top:1px solid rgba(255,255,255,0.5);
+        }
+        .box:hover .img{
+            transform:rotate(1080deg) scale(0.5);
+            opacity:0;
+            transition:0.35s;
+
+        }
+        .box:hover .text{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="img"><img src="fw.png" alt="凤王"></div>
+        <div class="text">
+            <h3>凤王<br>传奇宝可梦</h3>
+            <p>Pokemon of Legend</p>
+        </div>
+    </div>
+</body>
+</html>
