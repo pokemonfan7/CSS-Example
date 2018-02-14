@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -127,9 +127,6 @@
             box-sizing:border-box;
         }
     </style>
-    <script>
-
-    </script>
 </head>
 <body>
 <header>
@@ -155,25 +152,45 @@
     <p class="info_p">凤王是一种类似凤凰和孔雀的宝可梦。其羽毛多数为金色和红色，尾羽为黄色，身体暗面的羽毛为白色，
         双翼顶端的羽毛呈绿色。凤王的双翼呈棱镜形，这使得其在飞行时能够于身后形成彩虹。</p>
 </div>
-    <ul class="img_list">
-        <li><img src="images/1.jpg" alt=""></li>
-        <li><img src="images/2.jpg" alt=""></li>
-        <li><img src="images/3.jpg" alt=""></li>
-        <li><img src="images/4.jpg" alt=""></li>
-        <li><img src="images/5.jpg" alt=""></li>
-        <li><img src="images/6.jpg" alt=""></li>
-        <li><img src="images/7.jpg" alt=""></li>
-        <li><img src="images/8.jpg" alt=""></li>
-        <li><img src="images/9.jpg" alt=""></li>
-        <li><img src="images/10.jpg" alt=""></li>
-        <li><img src="images/11.jpg" alt=""></li>
-        <li><img src="images/12.jpg" alt=""></li>
-        <li><img src="images/13.jpg" alt=""></li>
-        <li><img src="images/14.jpg" alt=""></li>
-        <li><img src="images/15.jpg" alt=""></li>
-        <li><img src="images/16.jpg" alt=""></li>
-        <li><img src="images/17.jpg" alt=""></li>
+    <ul class="img_list" id="imgList">
+        <li><img src="images/0.jpg" alt="" data-src="images/1.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/2.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/3.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/4.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/5.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/6.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/7.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/8.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/9.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/10.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/11.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/12.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/13.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/14.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/15.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/16.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/17.jpg"></li>
     </ul>
 </main>
+<script>
+    var aImg = document.querySelectorAll('img');
+            var len = aImg.length;
+//    console.log(aImg.length);
+    var n = 0;//存储图片加载到的位置，避免每次都从第一张图片开始遍历
+    window.onscroll = function() {
+        // console.log("fg");
+        var seeHeight = document.documentElement.clientHeight;
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        for (var i = n; i < len; i++) {
+            if (aImg[i].offsetTop < seeHeight + scrollTop) {
+                if (aImg[i].getAttribute('src') == 'images/0.jpg') {
+                    aImg[i].src = aImg[i].getAttribute('data-src');
+                }
+                n = i + 1;
+                console.log('n = ' + n);
+            }
+        }
+    };
+</script>
 </body>
 </html>
