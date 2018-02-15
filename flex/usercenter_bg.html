@@ -156,24 +156,39 @@
         双翼顶端的羽毛呈绿色。凤王的双翼呈棱镜形，这使得其在飞行时能够于身后形成彩虹。</p>
 </div>
     <ul class="img_list">
-        <li><img src="images/1.jpg" alt=""></li>
-        <li><img src="images/2.jpg" alt=""></li>
-        <li><img src="images/3.jpg" alt=""></li>
-        <li><img src="images/4.jpg" alt=""></li>
-        <li><img src="images/5.jpg" alt=""></li>
-        <li><img src="images/6.jpg" alt=""></li>
-        <li><img src="images/7.jpg" alt=""></li>
-        <li><img src="images/8.jpg" alt=""></li>
-        <li><img src="images/9.jpg" alt=""></li>
-        <li><img src="images/10.jpg" alt=""></li>
-        <li><img src="images/11.jpg" alt=""></li>
-        <li><img src="images/12.jpg" alt=""></li>
-        <li><img src="images/13.jpg" alt=""></li>
-        <li><img src="images/14.jpg" alt=""></li>
-        <li><img src="images/15.jpg" alt=""></li>
-        <li><img src="images/16.jpg" alt=""></li>
-        <li><img src="images/17.jpg" alt=""></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/1.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/2.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/3.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/4.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/5.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/6.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/7.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/8.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/9.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/10.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/11.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/12.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/13.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/14.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/15.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/16.jpg"></li>
+        <li><img src="images/0.jpg" alt="" data-src="images/17.jpg"></li>
     </ul>
 </main>
+<script>
+window.onscroll=function(){
+	var aImg=document.querySelectorAll("img");
+	var len=aImg.length;
+	var n=0;
+	for(var i=n;i<len;i++){
+		if(aImg[i].getBoundingClientRect().top<document.documentElement.clientHeight){
+			if(aImg[i].getAttribute("src")==="images/0.jpg"){
+				aImg[i].src=aImg[i].getAttribute("data-src");
+			}
+			n=i+1;
+		}
+	}
+};
+</script>
 </body>
 </html>
