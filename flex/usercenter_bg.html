@@ -176,10 +176,18 @@
     </ul>
 </main>
 <script>
-window.onscroll=function(){
 	var aImg=document.querySelectorAll("img");
 	var len=aImg.length;
 	var n=0;
+	for(var i=n;i<len;i++){
+		if(aImg[i].getBoundingClientRect().top<document.documentElement.clientHeight){
+			if(aImg[i].getAttribute("src")==="images/0.jpg"){
+				aImg[i].src=aImg[i].getAttribute("data-src");
+			}
+			n=i+1;
+		}
+	}
+window.onscroll=function(){
 	for(var i=n;i<len;i++){
 		if(aImg[i].getBoundingClientRect().top<document.documentElement.clientHeight){
 			if(aImg[i].getAttribute("src")==="images/0.jpg"){
